@@ -3,3 +3,5 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="KinematicBody" type="KinematicBody" parent="KinematicBody2D"]
