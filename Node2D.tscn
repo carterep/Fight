@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/minecraftgrass_128x128-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/Steve_render.png" type="Texture" id=2]
+[ext_resource path="res://assets/cobblestone-block-128x.png" type="Texture" id=3]
 
 [sub_resource type="VisualScriptFunction" id=1]
 resource_name = "get_input"
@@ -129,7 +130,7 @@ data = {
 "function_id": -1,
 "name": "f_312843592",
 "nodes": [  ],
-"scroll": Vector2( 66.8801, 794.52 ),
+"scroll": Vector2( 66.8801, -167.25 ),
 "sequence_connections": [  ]
 } ],
 "is_tool_script": false,
@@ -170,6 +171,22 @@ data = {
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="TileSet" id=30]
+0/name = "cobblestone-block-128x.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1.68182, 38.6812 )
 
@@ -184,8 +201,14 @@ __meta__ = {
 scale = Vector2( 0.0589163, 0.0595279 )
 texture = ExtResource( 2 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="ground" type="TileMap" parent="."]
 position = Vector2( -6.10352e-05, -85.7714 )
 tile_set = SubResource( 29 )
 format = 1
 tile_data = PoolIntArray( 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0 )
+
+[node name="wall" type="TileMap" parent="."]
+tile_set = SubResource( 30 )
+cell_tile_origin = 1
+format = 1
+tile_data = PoolIntArray( 65544, 0, 0, 65545, 0, 0, 131080, 0, 0, 131081, 0, 0, 196616, 0, 0, 196617, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327687, 0, 0, 327690, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 458758, 0, 0, 458759, 0, 0, 458762, 0, 0, 458763, 0, 0 )
