@@ -1,8 +1,10 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://assets/minecraftgrass_128x128-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/Steve_render.png" type="Texture" id=2]
 [ext_resource path="res://assets/cobblestone-block-128x.png" type="Texture" id=3]
+[ext_resource path="res://assets/minecraftladder-128x.png" type="Texture" id=4]
+[ext_resource path="res://assets/minecraftdirt128.png" type="Texture" id=5]
 
 [sub_resource type="VisualScriptFunction" id=1]
 resource_name = "get_input"
@@ -164,23 +166,190 @@ argument_cache = {
 function = "move_and_collide"
 use_default_args = 3
 
-[sub_resource type="VisualScript" id=29]
+[sub_resource type="VisualScriptReturn" id=29]
+_default_input_values = [ null ]
+return_enabled = true
+
+[sub_resource type="VisualScriptFunctionCall" id=30]
+_default_input_values = [ Vector2( 0, 0 ) ]
+base_type = "KinematicBody2D"
+argument_cache = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "rel_vec",
+"type": 5,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "infinite_inertia",
+"type": 1,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "exclude_raycast_shapes",
+"type": 1,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "test_only",
+"type": 1,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 1,
+"id": 0,
+"name": "",
+"return": {
+"class_name": "KinematicCollision2D",
+"hint": 17,
+"hint_string": "KinematicCollision2D",
+"name": "",
+"type": 17,
+"usage": 7
+}
+}
+function = "move_and_collide"
+use_default_args = 3
+
+[sub_resource type="VisualScriptFunctionCall" id=31]
+_default_input_values = [ Vector2( 0, 0 ) ]
+base_type = "KinematicBody2D"
+argument_cache = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "rel_vec",
+"type": 5,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "infinite_inertia",
+"type": 1,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "exclude_raycast_shapes",
+"type": 1,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "test_only",
+"type": 1,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 1,
+"id": 0,
+"name": "",
+"return": {
+"class_name": "KinematicCollision2D",
+"hint": 17,
+"hint_string": "KinematicCollision2D",
+"name": "",
+"type": 17,
+"usage": 7
+}
+}
+function = "move_and_collide"
+use_default_args = 3
+
+[sub_resource type="VisualScriptFunctionCall" id=32]
+_default_input_values = [ Vector2( 0, 0 ) ]
+base_type = "KinematicBody2D"
+argument_cache = {
+"args": [ {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "rel_vec",
+"type": 5,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "infinite_inertia",
+"type": 1,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "exclude_raycast_shapes",
+"type": 1,
+"usage": 7
+}, {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "test_only",
+"type": 1,
+"usage": 7
+} ],
+"default_args": [  ],
+"flags": 1,
+"id": 0,
+"name": "",
+"return": {
+"class_name": "KinematicCollision2D",
+"hint": 17,
+"hint_string": "KinematicCollision2D",
+"name": "",
+"type": 17,
+"usage": 7
+}
+}
+function = "move_and_collide"
+use_default_args = 3
+
+[sub_resource type="VisualScriptPropertySet" id=33]
+_default_input_values = [ null, Vector2( 0, 0 ) ]
+set_mode = 2
+base_type = "KinematicCollision2D"
+base_script = ""
+type_cache = {
+"class_name": "",
+"hint": 0,
+"hint_string": "",
+"name": "travel",
+"type": 5,
+"usage": 7
+}
+property = "travel"
+index = ""
+
+[sub_resource type="VisualScript" id=34]
 data = {
 "base_type": "KinematicBody2D",
 "functions": [ {
-"data_connections": [ 2, 0, 3, 0, 6, 0, 7, 0, 8, 0, 11, 0, 10, 0, 12, 0, 9, 0, 13, 0, 21, 0, 18, 0, 17, 0, 19, 0, 22, 0, 20, 0, 27, 0, 23, 0, 25, 0, 26, 0, 24, 0, 27, 0, 6, 0, 28, 0, 5, 0, 6, 1, 14, 0, 17, 1, 15, 0, 21, 1, 16, 0, 22, 1, 26, 0, 27, 1 ],
-"function_id": 0,
-"name": "get_input",
-"nodes": [ 0, Vector2( 180, 60 ), SubResource( 1 ), 1, Vector2( 360, 60 ), SubResource( 2 ), 2, Vector2( 400, 200 ), SubResource( 3 ), 3, Vector2( 700, 60 ), SubResource( 4 ), 5, Vector2( 900, 320 ), SubResource( 5 ), 6, Vector2( 1080, 300 ), SubResource( 6 ), 7, Vector2( 1240, 140 ), SubResource( 7 ), 8, Vector2( 380, 360 ), SubResource( 8 ), 9, Vector2( 380, 820 ), SubResource( 9 ), 10, Vector2( 340, 520 ), SubResource( 10 ), 11, Vector2( 680, 340 ), SubResource( 11 ), 12, Vector2( 700, 580 ), SubResource( 12 ), 13, Vector2( 760, 940 ), SubResource( 13 ), 14, Vector2( 1140, 480 ), SubResource( 14 ), 15, Vector2( 1000, 800 ), SubResource( 15 ), 16, Vector2( 960, 1100 ), SubResource( 16 ), 17, Vector2( 1340, 480 ), SubResource( 17 ), 18, Vector2( 1400, 620 ), SubResource( 18 ), 19, Vector2( 1580, 380 ), SubResource( 19 ), 20, Vector2( 1500, 980 ), SubResource( 20 ), 21, Vector2( 1220, 740 ), SubResource( 21 ), 22, Vector2( 1280, 1060 ), SubResource( 22 ), 23, Vector2( 880, 1160 ), SubResource( 23 ), 24, Vector2( 300, 1180 ), SubResource( 24 ), 25, Vector2( 240, 1280 ), SubResource( 25 ), 26, Vector2( 500, 1340 ), SubResource( 26 ), 27, Vector2( 660, 1220 ), SubResource( 27 ), 28, Vector2( 1560, 140 ), SubResource( 28 ) ],
-"scroll": Vector2( 21, -193 ),
-"sequence_connections": [ 0, 0, 1, 1, 0, 3, 3, 0, 7, 3, 2, 11, 11, 2, 12, 12, 2, 13, 12, 0, 18, 11, 0, 19, 13, 0, 20, 13, 2, 23, 7, 0, 28 ]
-}, {
 "data_connections": [  ],
 "function_id": -1,
 "name": "f_312843592",
 "nodes": [  ],
-"scroll": Vector2( 1103.77, -38.912 ),
+"scroll": Vector2( 1187.37, 558.065 ),
 "sequence_connections": [  ]
+}, {
+"data_connections": [ 2, 0, 3, 0, 6, 0, 7, 0, 8, 0, 11, 0, 10, 0, 12, 0, 9, 0, 13, 0, 21, 0, 18, 0, 17, 0, 19, 0, 22, 0, 20, 0, 27, 0, 23, 0, 25, 0, 26, 0, 24, 0, 27, 0, 6, 0, 28, 0, 28, 0, 29, 0, 17, 0, 31, 0, 21, 0, 32, 0, 22, 0, 33, 0, 32, 0, 35, 0, 5, 0, 6, 1, 14, 0, 17, 1, 15, 0, 21, 1, 16, 0, 22, 1, 26, 0, 27, 1 ],
+"function_id": 0,
+"name": "get_input",
+"nodes": [ 0, Vector2( 180, 60 ), SubResource( 1 ), 1, Vector2( 360, 60 ), SubResource( 2 ), 2, Vector2( 400, 200 ), SubResource( 3 ), 3, Vector2( 700, 60 ), SubResource( 4 ), 5, Vector2( 900, 320 ), SubResource( 5 ), 6, Vector2( 1080, 300 ), SubResource( 6 ), 7, Vector2( 1240, 140 ), SubResource( 7 ), 8, Vector2( 380, 360 ), SubResource( 8 ), 9, Vector2( 380, 820 ), SubResource( 9 ), 10, Vector2( 340, 520 ), SubResource( 10 ), 11, Vector2( 680, 320 ), SubResource( 11 ), 12, Vector2( 700, 580 ), SubResource( 12 ), 13, Vector2( 760, 940 ), SubResource( 13 ), 14, Vector2( 1140, 480 ), SubResource( 14 ), 15, Vector2( 1000, 800 ), SubResource( 15 ), 16, Vector2( 960, 1100 ), SubResource( 16 ), 17, Vector2( 1300, 460 ), SubResource( 17 ), 18, Vector2( 1400, 620 ), SubResource( 18 ), 19, Vector2( 1580, 380 ), SubResource( 19 ), 20, Vector2( 1500, 980 ), SubResource( 20 ), 21, Vector2( 1220, 740 ), SubResource( 21 ), 22, Vector2( 1280, 1060 ), SubResource( 22 ), 23, Vector2( 880, 1160 ), SubResource( 23 ), 24, Vector2( 300, 1180 ), SubResource( 24 ), 25, Vector2( 240, 1280 ), SubResource( 25 ), 26, Vector2( 500, 1340 ), SubResource( 26 ), 27, Vector2( 660, 1220 ), SubResource( 27 ), 28, Vector2( 1540, 140 ), SubResource( 28 ), 29, Vector2( 1920, 160 ), SubResource( 29 ), 31, Vector2( 1820, 460 ), SubResource( 30 ), 32, Vector2( 1800, 660 ), SubResource( 31 ), 33, Vector2( 1720, 1000 ), SubResource( 32 ), 35, Vector2( 2080, 800 ), SubResource( 33 ) ],
+"scroll": Vector2( 21, -193 ),
+"sequence_connections": [ 0, 0, 1, 1, 0, 3, 3, 0, 7, 3, 2, 11, 11, 2, 12, 12, 2, 13, 12, 0, 18, 11, 0, 19, 13, 0, 20, 13, 2, 23, 7, 0, 28, 28, 0, 29, 19, 0, 31, 18, 0, 32, 20, 0, 33 ]
 } ],
 "is_tool_script": false,
 "signals": [  ],
@@ -204,12 +373,12 @@ data = {
 "vs_unify": true
 }
 
-[sub_resource type="TileSet" id=30]
+[sub_resource type="TileSet" id=35]
 0/name = "minecraftgrass_128x128-1.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( -2, -1, 126, 67 )
+0/region = Rect2( 0, 0, 63, 60 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -219,8 +388,22 @@ data = {
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+1/name = "minecraftdirt128.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 63, 62 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
 
-[sub_resource type="TileSet" id=31]
+[sub_resource type="TileSet" id=36]
 0/name = "cobblestone-block-128x.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -236,12 +419,28 @@ data = {
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="TileSet" id=37]
+0/name = "minecraftladder-128x.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 1, 0, 126, 102 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1.68182, 38.6812 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 47.2903, 459.692 )
-script = SubResource( 29 )
+script = SubResource( 34 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -251,13 +450,18 @@ scale = Vector2( 0.0589163, 0.0595279 )
 texture = ExtResource( 2 )
 
 [node name="ground" type="TileMap" parent="."]
-position = Vector2( -6.10352e-05, -85.7714 )
-tile_set = SubResource( 30 )
+position = Vector2( 0.999939, -85.7714 )
+tile_set = SubResource( 35 )
+cell_size = Vector2( 63, 60 )
 format = 1
-tile_data = PoolIntArray( 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0 )
+tile_data = PoolIntArray( 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0 )
 
 [node name="wall" type="TileMap" parent="."]
-tile_set = SubResource( 31 )
+tile_set = SubResource( 36 )
 cell_tile_origin = 1
 format = 1
 tile_data = PoolIntArray( 65544, 0, 0, 65545, 0, 0, 131080, 0, 0, 131081, 0, 0, 196616, 0, 0, 196617, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327687, 0, 0, 327690, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 458758, 0, 0, 458759, 0, 0, 458762, 0, 0, 458763, 0, 0 )
+
+[node name="ladder" type="TileMap" parent="."]
+tile_set = SubResource( 37 )
+format = 1
