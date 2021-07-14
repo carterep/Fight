@@ -1,9 +1,8 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://assets/minecraftgrass_128x128-1.png" type="Texture" id=1]
 [ext_resource path="res://assets/Steve_render.png" type="Texture" id=2]
 [ext_resource path="res://assets/cobblestone-block-128x.png" type="Texture" id=3]
-[ext_resource path="res://assets/minecraftladder-128x.png" type="Texture" id=4]
 [ext_resource path="res://assets/minecraftdirt128.png" type="Texture" id=5]
 
 [sub_resource type="VisualScriptFunction" id=1]
@@ -341,7 +340,7 @@ data = {
 "function_id": -1,
 "name": "f_312843592",
 "nodes": [  ],
-"scroll": Vector2( 1187.37, 558.065 ),
+"scroll": Vector2( 155.37, -179.25 ),
 "sequence_connections": [  ]
 }, {
 "data_connections": [ 2, 0, 3, 0, 6, 0, 7, 0, 8, 0, 11, 0, 10, 0, 12, 0, 9, 0, 13, 0, 21, 0, 18, 0, 17, 0, 19, 0, 22, 0, 20, 0, 27, 0, 23, 0, 25, 0, 26, 0, 24, 0, 27, 0, 6, 0, 28, 0, 28, 0, 29, 0, 17, 0, 31, 0, 21, 0, 32, 0, 22, 0, 33, 0, 32, 0, 35, 0, 5, 0, 6, 1, 14, 0, 17, 1, 15, 0, 21, 1, 16, 0, 22, 1, 26, 0, 27, 1 ],
@@ -420,20 +419,6 @@ data = {
 0/z_index = 0
 
 [sub_resource type="TileSet" id=37]
-0/name = "minecraftladder-128x.png 0"
-0/texture = ExtResource( 4 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 1, 0, 126, 102 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1.68182, 38.6812 )
@@ -449,6 +434,9 @@ __meta__ = {
 scale = Vector2( 0.0589163, 0.0595279 )
 texture = ExtResource( 2 )
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+polygon = PoolVector2Array( -16.0331, -27.0782, -19.7788, -20.9913, -7.04322, -10.8778, -17.906, 22.7405, -16.8759, 24.6134, -9.19704, 27.0481, 8.55978, 25.822, 3.71916, 5.47733, 4.75594, -3.19894, 14.5886, 5.13538, 15.2441, 5.60361, 19.9263, 0.7341, 6.53518, -12.0015, 7.93985, -19.5867, -4.32755, -21.3659, -4.79576, -18.7439 )
+
 [node name="ground" type="TileMap" parent="."]
 position = Vector2( 0.999939, -85.7714 )
 tile_set = SubResource( 35 )
@@ -460,7 +448,7 @@ tile_data = PoolIntArray( 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0
 tile_set = SubResource( 36 )
 cell_tile_origin = 1
 format = 1
-tile_data = PoolIntArray( 65544, 0, 0, 65545, 0, 0, 131080, 0, 0, 131081, 0, 0, 196616, 0, 0, 196617, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327687, 0, 0, 327690, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 458758, 0, 0, 458759, 0, 0, 458762, 0, 0, 458763, 0, 0 )
+tile_data = PoolIntArray( 65544, 0, 0, 65545, 0, 0, 131080, 0, 0, 131081, 0, 0, 196616, 0, 0, 196617, 0, 0, 262151, 0, 0, 262154, 0, 0, 327687, 0, 0, 327690, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 458758, 0, 0, 458759, 0, 0, 458762, 0, 0, 458763, 0, 0 )
 
 [node name="ladder" type="TileMap" parent="."]
 tile_set = SubResource( 37 )
